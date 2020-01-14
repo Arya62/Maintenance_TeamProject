@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import java.lang.String?>
+
+<BorderPane fx:id="borderPane" maxWidth="350.0" minWidth="350.0" prefHeight="420.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.sign.SignController">
+   <right>
+      <GridPane BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="325.0" minWidth="10.0" prefWidth="120.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="139.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="325.0" minWidth="10.0" prefWidth="94.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="149.0" minHeight="10.0" prefHeight="87.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="226.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="149.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="96.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="126.0" minHeight="7.0" prefHeight="18.0" />
+            <RowConstraints maxHeight="96.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="127.0" minHeight="0.0" prefHeight="45.0" valignment="CENTER" />
+            <RowConstraints maxHeight="110.0" minHeight="10.0" prefHeight="47.0" />
+            <RowConstraints maxHeight="110.0" minHeight="10.0" prefHeight="28.0" />
+            <RowConstraints maxHeight="110.0" minHeight="9.0" prefHeight="11.0" />
+         </rowConstraints>
+         <children>
+            <Button fx:id="signBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" stylesheets="@../styles/Login.css" text="Sign Up" onAction="#signButtonAction" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label text="Password: " textAlignment="CENTER" textFill="#f89406" GridPane.rowIndex="5" />
+            <PasswordField  fx:id="passwordTextfield" prefWidth="188.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Confirm Password: " textFill="#f89406" GridPane.rowIndex="6" />
+            <PasswordField  fx:id="confirmpasswordTextfield" prefHeight="13.0" prefWidth="149.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label text="Username: " textFill="#f89406" GridPane.rowIndex="3" />
+            <TextField fx:id="usernameTextfield" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <StackPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Label contentDisplay="CENTER" prefHeight="52.0" prefWidth="87.0" text="Sign Up" textAlignment="CENTER" textFill="#f89406">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0">
+               <children>
+                  <Button id="BackBtn" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" maxHeight="24.0" maxWidth="68.0" minWidth="45.0" mnemonicParsing="false" onAction = "#backButtonAction" prefHeight="24.0" prefWidth="45.0" stylesheets="@../styles/Login.css">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+			   </children>
+               <GridPane.margin>
+                  <Insets left="5.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+               <children>
+                  <Button id="MinimizedBtn" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" maxHeight="24.0" maxWidth="68.0" minWidth="45.0" mnemonicParsing="false" onAction="#minimizeWindow" prefHeight="24.0" prefWidth="45.0" stylesheets="@../styles/Login.css">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="CloseBtn" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" maxHeight="24.0" maxWidth="68.0" minWidth="45.0" mnemonicParsing="false" onAction="#closeSystem" prefHeight="24.0" prefWidth="45.0" stylesheets="@../styles/Login.css">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+               <GridPane.margin>
+                  <Insets right="10.0" top="10.0" />
+               </GridPane.margin>
+            </HBox>
+            <Label text="JavaFX Version 0.3" textFill="#f89406" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Button id="CheckBtn" fx:id="CheckBtn" mnemonicParsing="false" stylesheets="@../styles/Login.css" onAction="#checkButtonAction" text="Check" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+   </right>
+</BorderPane>
